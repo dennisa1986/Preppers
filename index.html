@@ -10,46 +10,69 @@
     <header class="header">
         <nav class="nav">
             <ul class="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="categories.html">Categorieën</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#categories">Categorieën</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="hero">
-            <h1>Voorbereid op elke situatie</h1>
-            <p>Bekijk ons brede assortiment aan duurzame noodvoorbereidingsproducten.</p>
-            <a href="categories.html" class="cta">Ontdek onze categorieën</a>
+        <!-- Parallax Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <h1>Voorbereid op elke situatie</h1>
+                <p>Bekijk ons brede assortiment aan duurzame noodvoorbereidingsproducten.</p>
+                <a href="#categories" class="cta">Ontdek onze categorieën</a>
+            </div>
         </section>
-        <section class="products">
-            <h2>Populaire Producten</h2>
-            <div class="product-grid">
-                <!-- Dynamisch geladen producten -->
-                <div class="product-card">
-                    <img src="img/ehbo-kit.jpg" alt="EHBO-kit">
-                    <h3>EHBO-kit</h3>
-                    <p>Onmisbaar in elke situatie.</p>
-                    <a href="#" class="btn">Bekijk product</a>
+
+        <!-- Product Categories -->
+        <section class="categories" id="categories">
+            <h2>Categorieën</h2>
+            <div class="category-grid">
+                <div class="category-card" style="background-image: url('img/ehbo-kit.jpg');">
+                    <div class="overlay">
+                        <h3>EHBO & Gezondheid</h3>
+                    </div>
                 </div>
-                <div class="product-card">
-                    <img src="img/waterfilter.jpg" alt="Waterfilter">
-                    <h3>Waterfilter</h3>
-                    <p>Altijd schoon drinkwater.</p>
-                    <a href="#" class="btn">Bekijk product</a>
+                <div class="category-card" style="background-image: url('img/waterfilter.jpg');">
+                    <div class="overlay">
+                        <h3>Water & Voedsel</h3>
+                    </div>
                 </div>
-                <div class="product-card">
-                    <img src="img/overlevingsdeken.jpg" alt="Overlevingsdeken">
-                    <h3>Overlevingsdeken</h3>
-                    <p>Warmte en comfort.</p>
-                    <a href="#" class="btn">Bekijk product</a>
+                <div class="category-card" style="background-image: url('img/overlevingsdeken.jpg');">
+                    <div class="overlay">
+                        <h3>Beschutting & Warmte</h3>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <h2>Wil je meer weten?</h2>
+            <p>Schrijf je in voor onze nieuwsbrief en blijf op de hoogte van tips en aanbiedingen.</p>
+            <a href="#contact" class="cta">Neem contact op</a>
+        </section>
     </main>
-    <footer class="footer">
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
         <p>&copy; 2024 Noodvoorbereiding Webshop - Voor een duurzame toekomst</p>
+        <a href="#hero" class="back-to-top">Terug naar boven</a>
     </footer>
+
+    <!-- Smooth Scroll -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
