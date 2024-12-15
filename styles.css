@@ -4,20 +4,22 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
-    background-color: #f7f8f5; /* Lichtgroene achtergrond */
+    background-color: #f7f8f5;
+    scroll-behavior: smooth;
 }
 
-/* Header */
-.header {
-    background-color: #004d40; /* Donkergroen */
+header {
+    background: #004d40;
     color: #fff;
     padding: 1rem 0;
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .nav-list {
     list-style: none;
-    padding: 0;
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -27,91 +29,162 @@ body {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-/* Hero sectie */
+.nav-list a:hover {
+    color: #aed581; /* Lichtgroen accent */
+}
+
+/* Hero Section met Parallax */
 .hero {
-    background-color: #e8f5e9; /* Lichtgroen */
+    background: url('img/hero-background.jpg') center / cover no-repeat fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
     text-align: center;
-    padding: 2rem;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Donkere overlay */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
-    color: #004d40;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .hero .cta {
-    display: inline-block;
-    margin-top: 1rem;
     padding: 0.75rem 1.5rem;
-    background-color: #00796b; /* Middengroen */
-    color: #fff;
+    background: #aed581;
+    color: #004d40;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
 }
 
 .hero .cta:hover {
-    background-color: #004d40; /* Donkergroen */
+    background: #7cb342;
 }
 
-/* Productsectie */
-.products {
+/* Categorieën */
+.categories {
     padding: 2rem;
-    background-color: #fff;
+    background: #fff;
+    text-align: center;
 }
 
-.product-grid {
+.categories h2 {
+    font-size: 2rem;
+    color: #004d40;
+    margin-bottom: 1rem;
+}
+
+.category-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
 }
 
-.product-card {
-    background-color: #e0f2f1; /* Zeer lichtgroen */
+.category-card {
+    background-size: cover;
+    background-position: center;
+    height: 200px;
     border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.category-card .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     padding: 1rem;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.product-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.product-card h3 {
-    color: #004d40;
     font-size: 1.25rem;
-    margin: 1rem 0;
+    transition: background 0.3s ease;
 }
 
-.product-card p {
+.category-card:hover .overlay {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* CTA Section */
+.cta-section {
+    background: #e8f5e9;
+    padding: 2rem;
+    text-align: center;
     color: #333;
 }
 
-.product-card .btn {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #00796b;
+.cta-section h2 {
+    font-size: 2rem;
+    color: #004d40;
+}
+
+.cta-section p {
+    margin: 1rem 0;
+}
+
+.cta-section .cta {
+    padding: 0.75rem 1.5rem;
+    background: #00796b;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    transition: background 0.3s ease;
 }
 
-.product-card .btn:hover {
-    background-color: #004d40;
+.cta-section .cta:hover {
+    background: #004d40;
 }
 
 /* Footer */
 .footer {
-    background-color: #004d40;
+    background: #004d40;
     color: #fff;
     text-align: center;
     padding: 1rem;
-    margin-top: 2rem;
+}
+
+.footer .back-to-top {
+    color: #aed581;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.footer .back-to-top:hover {
+    color: #7cb342;
 }
