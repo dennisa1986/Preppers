@@ -1,0 +1,117 @@
+/* Algemene stijlen */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f8f5; /* Lichtgroene achtergrond */
+}
+
+/* Header */
+.header {
+    background-color: #004d40; /* Donkergroen */
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-list a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero sectie */
+.hero {
+    background-color: #e8f5e9; /* Lichtgroen */
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #004d40;
+}
+
+.hero .cta {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #00796b; /* Middengroen */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.hero .cta:hover {
+    background-color: #004d40; /* Donkergroen */
+}
+
+/* Productsectie */
+.products {
+    padding: 2rem;
+    background-color: #fff;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background-color: #e0f2f1; /* Zeer lichtgroen */
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    color: #004d40;
+    font-size: 1.25rem;
+    margin: 1rem 0;
+}
+
+.product-card p {
+    color: #333;
+}
+
+.product-card .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #00796b;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.product-card .btn:hover {
+    background-color: #004d40;
+}
+
+/* Footer */
+.footer {
+    background-color: #004d40;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
