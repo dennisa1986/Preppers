@@ -1,34 +1,106 @@
-/* Algemene stijl voor categorieën */
+/* Algemene stijlen */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f8f5;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background: #004d40;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: #aed581;
+}
+
+/* Hero-sectie */
+.hero {
+    background: url('https://source.unsplash.com/1600x900/?survival') center / cover no-repeat fixed;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Donkere overlay */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Categorieën */
 .categories {
     padding: 2rem;
-    background: #f7f8f5;
     text-align: center;
 }
 
 .category-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsieve grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    margin: 0 auto;
 }
 
-/* Categoriekaarten */
 .category-card {
-    background: #fff;
+    background: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
-    flex-direction: column; /* Zorgt dat inhoud onder elkaar staat */
-    text-align: center;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .category-card img {
-    width: 100%; /* Afbeelding vult de breedte van de kaart */
-    height: auto; /* Houdt de aspect ratio correct */
-    max-height: 200px; /* Limiteert de hoogte */
-    object-fit: cover; /* Zorgt dat de afbeelding netjes binnen de container blijft */
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
 .category-card h3 {
@@ -39,18 +111,17 @@
 
 .category-card p {
     color: #666;
-    font-size: 1rem;
-    margin: 0.5rem 1rem 1rem;
+    padding: 0 1rem 1rem;
+    margin: 0;
 }
 
 .category-card .btn {
-    display: inline-block;
-    margin: 1rem auto;
     padding: 0.5rem 1rem;
     background: #00796b;
-    color: #fff;
-    text-decoration: none;
+    color: white;
     border-radius: 5px;
+    margin: 1rem auto;
+    text-decoration: none;
     font-weight: bold;
     transition: background 0.3s ease;
 }
@@ -59,8 +130,22 @@
     background: #004d40;
 }
 
-/* Hover-effect voor kaarten */
-.category-card:hover {
-    transform: translateY(-5px); /* Licht omhoog schuiven bij hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+/* Footer */
+.footer {
+    background: #004d40;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.footer .back-to-top {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #aed581;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer .back-to-top:hover {
+    color: white;
 }
