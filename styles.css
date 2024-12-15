@@ -217,3 +217,17 @@ body {
 .footer .back-to-top:hover {
     color: white;
 }
+
+/* Overgang van hero naar categorieën */
+.transition {
+    position: relative;
+    width: 100%;
+    background: transparent;
+}
+
+.transition svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: -10px; /* Naadloze overgang */
+}
