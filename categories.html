@@ -7,30 +7,65 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="categories.html">Categorieën</a></li>
+                <li><a href="#categories">Categorieën</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
+    <!-- Hero sectie met parallax-effect -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Ontdek onze categorieën</h1>
+            <p>Alles wat je nodig hebt om voorbereid te zijn op elke situatie.</p>
+        </div>
+    </section>
     <main>
-        <h1>Categorieën</h1>
-        <section>
-            <ul class="categories">
-                <li><a href="#">EHBO & Gezondheid</a></li>
-                <li><a href="#">Water & Voedsel</a></li>
-                <li><a href="#">Communicatie & Signalisatie</a></li>
-                <li><a href="#">Beschutting & Warmte</a></li>
-                <li><a href="#">Gereedschap & Overleving</a></li>
-            </ul>
+        <!-- Categorieën -->
+        <section class="categories" id="categories">
+            <h1>Categorieën</h1>
+            <p>Vind producten gesorteerd op type om voorbereid te zijn op elke situatie.</p>
+            <div class="category-grid">
+                <div class="category-card">
+                    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQdgJYMM-eihPAF2LDIYNniLNSnUCv2zga1S8dRyRUoVpWA89wqfCSm0jzWJZzCY5iksgtGmKJLTRLOug9PAxEiIaZzlgGUmfddXjQL2BI&usqp=CAc" alt="EHBO & Gezondheid">
+                    <h3>EHBO & Gezondheid</h3>
+                    <p>Essentiële benodigdheden voor eerste hulp en medische zorg.</p>
+                    <a href="#" class="btn">Bekijk producten</a>
+                </div>
+                <div class="category-card">
+                    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSq--w-h_EFti-Zu6BRUudZY4vm6fRjhTqkSk3JlxYhSYJGZC7A7MaPy7iTmAkFpo20DreBqX7uYEqM1kmUQc8b3E7DOhx4ksqxnYaKoLJ5I5hVbH12fWDm&usqp=CAc" alt="Water & Voedsel">
+                    <h3>Water & Voedsel</h3>
+                    <p>Altijd toegang tot schoon drinkwater en voedselopslag.</p>
+                    <a href="#" class="btn">Bekijk producten</a>
+                </div>
+                <div class="category-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb-g40J23RQRiQxlh4lG3ZKVj_3HSUuT7Vmzzcb0nHtw&s" alt="Beschutting & Warmte">
+                    <h3>Beschutting & Warmte</h3>
+                    <p>Blijf warm en veilig in noodsituaties met onze producten.</p>
+                    <a href="#" class="btn">Bekijk producten</a>
+                </div>
+                <div class="category-card">
+                    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSzVmTKxqRK0f-EfcOaOIzTYjk9uGDst9QrCIVeEOS_OXdFl1I7peUMji43PX_buaBxQCQEw_YzIwiZm0yz9gxk-4wvUIOhreooyosaYbqgyPkOBuBGs7L2&usqp=CAc" alt="Communicatie & Signalisatie">
+                    <h3>Communicatie & Signalisatie</h3>
+                    <p>Houd contact en blijf zichtbaar met geavanceerde tools.</p>
+                    <a href="#" class="btn">Bekijk producten</a>
+                </div>
+                <div class="category-card">
+                    <img src="https://media.s-bol.com/gNMvgvVr2D7k/JV4PWv/550x550.jpg" alt="Gereedschap & Overleving">
+                    <h3>Gereedschap & Overleving</h3>
+                    <p>Hoogwaardige tools voor overleven in elke situatie.</p>
+                    <a href="#" class="btn">Bekijk producten</a>
+                </div>
+            </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2024 Noodvoorbereiding Webshop</p>
+    <footer class="footer">
+        <p>&copy; 2024 Noodvoorbereiding Webshop - Voor een duurzame toekomst</p>
+        <a href="#categories" class="back-to-top">Terug naar boven</a>
     </footer>
 </body>
 </html>
