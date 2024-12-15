@@ -1,5 +1,193 @@
-/* Algemene stijlen zoals eerder */
+/* Algemene stijlen */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f8f5;
+    scroll-behavior: smooth;
+}
 
+header {
+    background: #004d40;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-list a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: #aed581; /* Lichtgroen accent */
+}
+
+/* Hero Section met Parallax */
+.hero {
+    background: url('img/hero-background.jpg') center / cover no-repeat fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Donkere overlay */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero .cta {
+    padding: 0.75rem 1.5rem;
+    background: #aed581;
+    color: #004d40;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+.hero .cta:hover {
+    background: #7cb342;
+}
+
+/* Categorieën */
+.categories {
+    padding: 2rem;
+    background: #fff;
+    text-align: center;
+}
+
+.categories h2 {
+    font-size: 2rem;
+    color: #004d40;
+    margin-bottom: 1rem;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.category-card {
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.category-card .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.25rem;
+    transition: background 0.3s ease;
+}
+
+.category-card:hover .overlay {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* CTA Section */
+.cta-section {
+    background: #e8f5e9;
+    padding: 2rem;
+    text-align: center;
+    color: #333;
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    color: #004d40;
+}
+
+.cta-section p {
+    margin: 1rem 0;
+}
+
+.cta-section .cta {
+    padding: 0.75rem 1.5rem;
+    background: #00796b;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.cta-section .cta:hover {
+    background: #004d40;
+}
+
+/* Footer */
+.footer {
+    background: #004d40;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.footer .back-to-top {
+    color: #aed581;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.footer .back-to-top:hover {
+    color: #7cb342;
+}
 /* Categorieënpagina */
 .categories {
     padding: 2rem;
