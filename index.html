@@ -3,76 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noodvoorbereiding Webshop</title>
+    <title>Categorieën - Noodvoorbereiding Webshop</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="header">
         <nav class="nav">
             <ul class="nav-list">
-                <li><a href="#hero">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="#categories">Categorieën</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <!-- Parallax Hero Section -->
-        <section class="hero" id="hero">
-            <div class="hero-content">
-                <h1>Voorbereid op elke situatie</h1>
-                <p>Bekijk ons brede assortiment aan duurzame noodvoorbereidingsproducten.</p>
-                <a href="#categories" class="cta">Ontdek onze categorieën</a>
-            </div>
-        </section>
-
-        <!-- Product Categories -->
         <section class="categories" id="categories">
-            <h2>Categorieën</h2>
+            <h1>Categorieën</h1>
+            <p>Vind producten gesorteerd op type om voorbereid te zijn op elke situatie.</p>
             <div class="category-grid">
-                <div class="category-card" style="background-image: url('img/ehbo-kit.jpg');">
-                    <div class="overlay">
-                        <h3>EHBO & Gezondheid</h3>
-                    </div>
+                <div class="category-card">
+                    <img src="img/ehbo-kit.jpg" alt="EHBO & Gezondheid">
+                    <h3>EHBO & Gezondheid</h3>
+                    <p>Essentiële benodigdheden voor eerste hulp en medische zorg.</p>
+                    <a href="#" class="btn">Bekijk producten</a>
                 </div>
-                <div class="category-card" style="background-image: url('img/waterfilter.jpg');">
-                    <div class="overlay">
-                        <h3>Water & Voedsel</h3>
-                    </div>
+                <div class="category-card">
+                    <img src="img/waterfilter.jpg" alt="Water & Voedsel">
+                    <h3>Water & Voedsel</h3>
+                    <p>Altijd toegang tot schoon drinkwater en voedselopslag.</p>
+                    <a href="#" class="btn">Bekijk producten</a>
                 </div>
-                <div class="category-card" style="background-image: url('img/overlevingsdeken.jpg');">
-                    <div class="overlay">
-                        <h3>Beschutting & Warmte</h3>
-                    </div>
+                <div class="category-card">
+                    <img src="img/overlevingsdeken.jpg" alt="Beschutting & Warmte">
+                    <h3>Beschutting & Warmte</h3>
+                    <p>Blijf warm en veilig in noodsituaties met onze producten.</p>
+                    <a href="#" class="btn">Bekijk producten</a>
+                </div>
+                <div class="category-card">
+                    <img src="img/communicatie.jpg" alt="Communicatie & Signalisatie">
+                    <h3>Communicatie & Signalisatie</h3>
+                    <p>Houd contact en blijf zichtbaar met geavanceerde tools.</p>
+                    <a href="#" class="btn">Bekijk producten</a>
+                </div>
+                <div class="category-card">
+                    <img src="img/gereedschap.jpg" alt="Gereedschap & Overleving">
+                    <h3>Gereedschap & Overleving</h3>
+                    <p>Hoogwaardige tools voor overleven in elke situatie.</p>
+                    <a href="#" class="btn">Bekijk producten</a>
                 </div>
             </div>
-        </section>
-
-        <!-- Call to Action -->
-        <section class="cta-section">
-            <h2>Wil je meer weten?</h2>
-            <p>Schrijf je in voor onze nieuwsbrief en blijf op de hoogte van tips en aanbiedingen.</p>
-            <a href="#contact" class="cta">Neem contact op</a>
         </section>
     </main>
-
-    <!-- Footer -->
-    <footer class="footer" id="contact">
+    <footer class="footer">
         <p>&copy; 2024 Noodvoorbereiding Webshop - Voor een duurzame toekomst</p>
-        <a href="#hero" class="back-to-top">Terug naar boven</a>
+        <a href="#categories" class="back-to-top">Terug naar boven</a>
     </footer>
-
-    <!-- Smooth Scroll -->
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 </body>
 </html>
