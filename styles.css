@@ -39,7 +39,7 @@ body {
 
 /* Hero-sectie */
 .hero {
-    background-image: url('https://cdn.midjourney.com/68e86029-785b-4b4d-830e-2e001ae1f956/0_1.jpeg');
+    background-image: url('https://cdn.midjourney.com/63e615d3-4cd2-42fa-aa21-fb071f69c2e7/0_1.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -153,22 +153,6 @@ body {
 
 .category-card .btn:hover {
     background: #004d40;
-}
-
-/* Blogsectie */
-.blog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    padding: 1rem;
-}
-
-.blog-card {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    text-align: center;
 }
 
 /* Footer */
